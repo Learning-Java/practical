@@ -5,6 +5,17 @@ public class SavingsBankAccount {
     private double interestRate;
     private double balance;
 
+    public String toString(){
+        StringBuilder builder = new StringBuilder();
+        builder.append("Number: ").append(number).append(", Balance: ").append(balance);
+        return builder.toString();
+    }
+
+    public void  displaySavingsBA(SavingsBankAccount savingsBankAccount){
+
+        System.out.println(savingsBankAccount);
+    }
+
     public double getBalance() {
         return balance;
     }

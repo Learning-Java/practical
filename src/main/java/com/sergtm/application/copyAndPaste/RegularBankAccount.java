@@ -6,7 +6,17 @@ public class RegularBankAccount {
     private double balance;
     private Integer amountOfCostlyOperations;
 
+    public String toString(){
+        StringBuilder builder = new StringBuilder();
+        builder.append("Number: ").append(number).append(", Balance: ").append(balance);
+        return builder.toString();
+    }
+    public void displayRegularBA(RegularBankAccount regularBankAccount){
 
+
+        System.out.println(regularBankAccount);
+
+    }
 
     public Integer getAmountOfCostlyOperations() {
         return amountOfCostlyOperations;
