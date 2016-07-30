@@ -33,8 +33,8 @@ public class Main {
             savingsBankAccount.setBalance(800);
             savingsBankAccount.setInterestRate(0.03);
 
-        regularBankAccount.displayRegularBA(regularBankAccount);
-        savingsBankAccount.displaySavingsBA(savingsBankAccount);
+        main.displayRegularBA(regularBankAccount);
+        main.displaySavingsBA(savingsBankAccount);
 
         savingsBankAccountList.add(savingsBankAccount);
         savingsBankAccountList.add(savingsBankAccount1);
@@ -56,6 +56,13 @@ public class Main {
         for (SavingsBankAccount s : listOfSavingBankAccounts) {
             System.out.println(s);
         }
+    }
+    public void  displaySavingsBA(SavingsBankAccount savingsBankAccount){
+        System.out.println(savingsBankAccount);
+    }
+
+    public void displayRegularBA(RegularBankAccount regularBankAccount){
+        System.out.println(regularBankAccount);
     }
 }
 
