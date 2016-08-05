@@ -8,20 +8,23 @@ import java.util.List;
  */
 public class ATMSimulator {
 
-    public List<Integer> cashCounter(int amount, List<Integer> nominal) throws GoToOtherATMException {
-        List<Integer> result = new ArrayList<Integer>();
+    public List<Integer> cashCounter(int amountParam, List<Integer> nominals) throws GoToOtherATMException {
+        List<Integer> result = new ArrayList<>();
+        int nominalSize = nominals.size();
+        int amount = amountParam;
+
         int index = 0;
         do{
-            Integer cash = nominal.get(index);
-            if(amount >= cash) {
-                amount = amount - cash;
-                result.add(cash);
+            Integer nominal = nominals.get(index);
+            if(amount >= nominal) {
+                amount = amount - nominal;
+                result.add(nominal);
                 index = 0;
                 continue;
             }
             index++;
 
-        }while (index != nominal.size());
+        }while (index != nominalSize);
 
         if(amount != 0){
             throw new GoToOtherATMException("Go to other ATM");
