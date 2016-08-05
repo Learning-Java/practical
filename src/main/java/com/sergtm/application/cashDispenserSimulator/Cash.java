@@ -5,10 +5,10 @@ package com.sergtm.application.cashDispenserSimulator;
  */
 public class Cash {
     private final int nominal;
-    private final int amount;
 
-    public Cash(int nominal, int amount){
-        this.amount = amount;
+
+    public Cash(int nominal){
+
         this.nominal = nominal;
     }
 
@@ -16,7 +16,5 @@ public class Cash {
         return nominal;
     }
 
-    public int getAmount() {
-        return amount;
-    }
+
 }

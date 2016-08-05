@@ -14,13 +14,14 @@ public class cashDispenserSimulatorTest {
     @Test
     public void shouldReturnTwoResults() throws GoToOtherATMException {
         ATMSimulator atmSimulator = new ATMSimulator();
-        List<Cash> cashes = new ArrayList<Cash>();
-        cashes.add(new Cash(500, 4));
-        cashes.add(new Cash(1000, 2));
-        cashes.add(new Cash(5000, 1));
+        List<Integer> cashes = Arrays.asList(5000, 1000, 500);
 
 
-        List<Cash> result = Arrays.asList(new Cash(500, 2), new Cash(1000, 1));
+
+
+        List<Integer> result = new ArrayList<Integer>();
+
+        result.add(1000);
 
         Assert.assertEquals(
 
@@ -30,21 +31,11 @@ public class cashDispenserSimulatorTest {
     @Test
     public void shouldReturnThreeResults() throws GoToOtherATMException{
         ATMSimulator atmSimulator = new ATMSimulator();
-        List<Cash> cashes = new ArrayList<Cash>();
-        cashes.add(new Cash(50, 2));
-        cashes.add(new Cash(100,4));
-        cashes.add(new Cash(500, 4));
-        cashes.add(new Cash(1000, 2));
-        cashes.add(new Cash(5000, 1));
+        List<Integer> cashes = Arrays.asList(5000, 1000, 500, 100, 50);
 
-        int[] firstRow = {500, 500, 500, 500, 100, 100, 100, 100, 50};
-        int[] secondRow = {500, 500, 1000, 100, 100, 100, 100, 50};
-        int[] thirdRow = {1000, 1000, 100, 100, 100, 100, 50};
+        List<Integer> result = Arrays.asList(1000, 1000, 100, 100, 100, 100, 50 );
 
-        List<int[]> result = new ArrayList<int[]>();
-        result.add(firstRow);
-        result.add(secondRow);
-        result.add(thirdRow);
+
 
         Assert.assertEquals(
                 atmSimulator.cashCounter(2450, cashes), result);
@@ -54,11 +45,7 @@ public class cashDispenserSimulatorTest {
     public void shouldThrowGoToOtherATMException() throws GoToOtherATMException{
         ATMSimulator atmSimulator = new ATMSimulator();
 
-        List<Cash> cashes = new ArrayList<Cash>();
-        cashes.add(new Cash(100,4));
-        cashes.add(new Cash(500, 4));
-        cashes.add(new Cash(1000, 2));
-        cashes.add(new Cash(5000, 1));
+        List<Integer> cashes = Arrays.asList(5000, 1000, 500, 100);
 
         atmSimulator.cashCounter(2450, cashes);
     }
