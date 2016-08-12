@@ -24,12 +24,12 @@ public class WhoIsBetterTest {
     public void testWhoIsBetterNormal() {
         WhoIsBetter whoIsBetter = new WhoIsBetter();
         Assert.assertEquals(
-                whoIsBetter.compare(12346, 12345), 12346);
+                whoIsBetter.compare(12346, 12345), 16);
     }
     @Test
     public void testWhoIsBetterEqual() {
         WhoIsBetter whoIsBetter = new WhoIsBetter();
         Assert.assertEquals(
-                whoIsBetter.compare(98, 98), 98);
+                whoIsBetter.compare(98, 98), 17);
     }
 }
