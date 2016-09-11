@@ -10,13 +10,13 @@ import static org.junit.Assert.assertEquals;
 public class SubsetOfASetTest {
     @Test
     public void shouldReturnFive()  {
-        SubsetOfASet variable = new SubsetOfASet();
-        assertEquals(variable.subsetOfASet(8), 5);
+        SubsetOfASet var = new SubsetOfASet();
+        assertEquals(var.subsetOfASet(8), 5);
     }
 
     @Test
     public void shouldReturnThirtyThree() {
-        SubsetOfASet variable = new SubsetOfASet();
-        assertEquals(variable.subsetOfASet(50), 33);
+        SubsetOfASet var = new SubsetOfASet();
+        assertEquals(var.subsetOfASet(50), 33);
     }
 }

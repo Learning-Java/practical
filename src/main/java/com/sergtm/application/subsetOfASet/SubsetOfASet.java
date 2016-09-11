@@ -9,7 +9,7 @@ import java.util.List;
 public class SubsetOfASet {
     public int subsetOfASet(int lastNumber){
         boolean stat = false;
-        List<Integer> resultList = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
         List<Integer> invalidNumbers = new ArrayList<>();
         for(int i = 1; i <= lastNumber; i++){
             for (int x = 0; x < invalidNumbers.size(); x++){
@@ -20,11 +20,11 @@ public class SubsetOfASet {
             }
             if(!stat){
                 invalidNumbers.add(i * 2);
-                resultList.add(i);
+                list.add(i);
             }
             stat = false;
         }
-        int result = resultList.size();
+        int result = list.size();
         return result;
     }
 }
