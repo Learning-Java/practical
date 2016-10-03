@@ -6,13 +6,13 @@ package com.sergtm.application.whoIsBetter;
 public class WhoIsBetter {
     private int getSumOfNumber(int number){
         int lastNumber = number;
-        int result = number%10;
+        int res = number%10;
 
         while(lastNumber>0){
             lastNumber = lastNumber / 10;
-            result = result + lastNumber%10;
+            res = res + lastNumber%10;
         }
-        return result;
+        return res;
     }
     public int compare(int firstNumber, int secondNumber){
 
