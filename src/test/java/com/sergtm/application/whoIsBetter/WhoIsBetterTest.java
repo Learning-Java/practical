@@ -1,6 +1,5 @@
-package com.sergtm.application.whoIsBetterTest;
+package com.sergtm.application.whoIsBetter;
 
-import com.sergtm.application.whoIsBetter.WhoIsBetter;
 import junit.framework.Assert;
 import org.junit.Test;
 
@@ -9,13 +8,13 @@ import org.junit.Test;
  */
 public class WhoIsBetterTest {
     @Test
-    public void testWhoIsBetterFour() {
+    public void testWhoIsBetterResFour() {
         WhoIsBetter whoIsBetter = new WhoIsBetter();
         Assert.assertEquals(
                 whoIsBetter.compare(3, 4), 4);
     }
     @Test
-    public void testWhoIsBetterThree() {
+    public void testWhoIsBetterResThree() {
         WhoIsBetter whoIsBetter = new WhoIsBetter();
         Assert.assertEquals(
                 whoIsBetter.compare(3, 12), 3);
